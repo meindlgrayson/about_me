@@ -89,41 +89,49 @@ if (answerThree === 'YES' || answerThree === 'Y') {
 
 attractive(); //function end.
 
-// alert('And they told you this was going to be a game..');
-// alert('Well if it matters to you for some reason or another, you answered "Yes" ' + yesCount + ' times and "No" ' + noCount + ' times.');
-// alert('Oh shit, wait. Here, I\'ve got a real game, now.');
+alert('And they told you this was going to be a game..');
+alert('Well if it matters to you for some reason or another, you answered "Yes" ' + yesCount + ' times and "No" ' + noCount + ' times.');
+alert('Oh shit, wait. Here, I\'ve got a real game, now.');
 
+function numGuess(){
 
-// for(var gameAttempt = 4; gameAttempt > 0; gameAttempt--) {
-//   var gameAnswer = prompt('Try to guess a number between 1 and 10', 'you\'ve got ' + gameAttempt + ' attempts');
-//   if(Number(gameAnswer) === 7) {
-//     alert('Congrats, you won a game requiring 0 skill.');
-//     gameAttempt = 0;
-//   } else if((gameAnswer < 7 || gameAnswer > 7) && gameAttempt > 1 && gameAnswer < 11) {
-//     alert('Nah. Try again.');
-//   } else if (gameAnswer > 10 || (gameAttempt === 1 && gameAnswer !== 7)) {
-//     alert('It was 7. The answer was 7.');
-//     gameAttempt = 0;
-//   }
-// };
+for(var gameAttempt = 4; gameAttempt > 0; gameAttempt--) {
+  var gameAnswer = prompt('Try to guess a number between 1 and 10', 'you\'ve got ' + gameAttempt + ' attempts');
+  if(Number(gameAnswer) === 7) {
+    alert('Congrats, you won a game requiring 0 skill.');
+    gameAttempt = 0;
+  } else if((gameAnswer < 7 || gameAnswer > 7) && gameAttempt > 1 && gameAnswer < 11) {
+    alert('Nah. Try again.');
+  } else if (gameAnswer > 10 || (gameAttempt === 1 && gameAnswer !== 7)) {
+    alert('It was 7. The answer was 7.');
+    gameAttempt = 0;
+  }
+}
+}
 
-// alert('I\'ve got one more for you...');
+numGuess();
 
-// var teams = ['flyers', 'eagles', 'olympico de marseille', 'cubs', 'clemson tigers', 'philly', 'tigers', 'clemson'];
-// var teamAttempt = 6;
-// var correct = false;
-// while(teamAttempt > 0 && !correct) {
-//   var teamAnswer = prompt('Guess on of my five favorite sports teams', 'You have ' + teamAttempt + ' attempts').toLowerCase();
-//   for(var i = 0; i < teams.length; i++) {
-//     if(teamAnswer === teams[i]) {
-//       correct = true;
-//     }
-//   } if(correct === true) {
-//     alert('Good guess.');
-//   } else if(teamAttempt === 1 && teamAnswer !== teams[i]) {
-//     alert('You don\'t know me. Acceptable answers were "Flyers, Eagles, Cubs, Clemson Tigers, or Olympic de Marseille"');
-//   } else {
-//     alert('Try again');
-//   }
-//   teamAttempt -= 1;
-// };
+alert('I\'ve got one more for you...');
+
+function sportsTeams(){
+var teams = ['flyers', 'eagles', 'olympico de marseille', 'cubs', 'clemson tigers', 'philly', 'tigers', 'clemson'];
+var teamAttempt = 6;
+var correct = false;
+while(teamAttempt > 0 && !correct) {
+  var teamAnswer = prompt('Guess on of my five favorite sports teams', 'You have ' + teamAttempt + ' attempts').toLowerCase();
+  for(var i = 0; i < teams.length; i++) {
+    if(teamAnswer === teams[i]) {
+      correct = true;
+    }
+  } if(correct === true) {
+    alert('Good guess.');
+  } else if(teamAttempt === 1 && teamAnswer !== teams[i]) {
+    alert('You don\'t know me. Acceptable answers were "Flyers, Eagles, Cubs, Clemson Tigers, or Olympic de Marseille"');
+  } else {
+    alert('Try again');
+  }
+  teamAttempt -= 1;
+};
+}
+
+sportsTeams();
