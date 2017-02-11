@@ -2,6 +2,8 @@
 
 var yesCount = 0;
 var noCount = 0;
+var elseAnswer = 'Too stupid for a yes/no question? Honestly nobody is surprised.';
+var elseLog = 'idiot';
 
 function isYes(answer) {
   return answer === 'YES' || answer === 'Y';
@@ -9,10 +11,6 @@ function isYes(answer) {
 
 function goodDay() {
   var answerOne = prompt('Are you having a good day?', 'Y/N').toUpperCase();
-
-  var elseAnswer = 'Too stupid for and yes/no question? Honestly nobody is surprised.';
-
-  var elseLog = 'idiot';
 
   if (isYes(answerOne)) {
     alert('That\'s fanfuckingtastic..');
