@@ -1,6 +1,8 @@
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
     background-image:url("http://www.wheretowillie.com/wp-content/uploads/2013/12/The-City-Glows-Portland-Oregon.jpg");
+    font-style: oblique;
+    font-size: larger;
 }
 
 nav li {
@@ -62,3 +64,16 @@ div {
 #one {
     float: left;
 }
+
+a:link, a:visited {
+    color: darkslategray;
+   text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color: black;
+    cursor: default;
+}
+
+
